@@ -1,0 +1,22 @@
+.projectImg {
+	float: left;
+	border-radius: 8px 0 0 8px;
+	margin-right: 20px;
+}
+
+.clear {
+	clear: left;
+}
+
+div.project {
+	margin: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	border: solid 3px grey;
+	height: 200px;
+	box-shadow: 2px 2px 10px 0 grey;
+}
+
+.hover {
+	background-color: grey;
+}

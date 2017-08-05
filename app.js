@@ -1,0 +1,35 @@
+// I have http-server installed through npm to run this on a quick server.
+// to call server, type this in the console: http-server -c-1
+
+var app = angular.module('myModule', []);
+
+app.controller('myController', function($scope){
+	$scope.projects = [
+		{ name: 'project1',	src: "http://placehold.it/200x200", date: 050117, collaborators: ['Roger', 'Ellie']	},
+		{ name: 'project2',	src: "http://placehold.it/200x200", date: 050217, collaborators: ['Roger', 'Tina']	},
+		{ name: 'project3',	src: "http://placehold.it/200x200", date: 050317, collaborators: ['Billy', 'Ellie']	},
+		{ name: 'project4',	src: "http://placehold.it/200x200", date: 050417, collaborators: ['Tommy', 'Ellie']	},
+		{ name: 'project5',	src: "http://placehold.it/200x200", date: 050517, collaborators: ['Billy', 'Ellie']	},
+	]
+	$scope.popup = function(){
+		alert("Hi");
+	};
+
+
+});
+
+app.directive('myDirective', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'project.html',
+		link: function(scope, element, attrs) {
+			scope.hoverItem = function(hovered) {
+				if (hovered) {
+					element.addClass('hover');
+				} else {
+					element.removeClass('hover');
+				}
+			}
+		}
+	};
+});

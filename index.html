@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Lab 14</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+<div ng-app="myModule" ng-controller="myController" ng-click="popup()" ng-model="projectDiv">
+{{2+2}}
+<div ng-repeat="project in projects" >
+
+<my-directive></my-directive>
+	
+</div>
+
+
+
+
+
+</div>
+
+</body>
+</html>
