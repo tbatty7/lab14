@@ -15,6 +15,7 @@ app.controller('myController', function($scope){
 		alert("Hi");
 	};
 
+	$scope.border = "grey"
 
 });
 
@@ -22,14 +23,18 @@ app.directive('myDirective', function(){
 	return {
 		restrict: 'E',
 		templateUrl: 'project.html',
-		link: function(scope, element, attrs) {
-			scope.hoverItem = function(hovered) {
-				if (hovered) {
-					element.addClass('hover');
-				} else {
-					element.removeClass('hover');
-				}
-			}
+		link: function(scope, elem, attrs) {
+			elem.on('click', function(){
+				scope.$apply(scope.border = 'red');  // The .$apply() only works with scope. scope.border- 
+				// is referenced in the project.html snippet connected by templateUrl:
+			});
+			elem.on('mouseenter', function(){
+				scope.$apply(scope.border = 'black');
+			});
+			elem.on('mouseleave', function(){
+				scope.$apply(scope.border = 'grey');
+			});
 		}
 	};
+
 });

@@ -9,14 +9,14 @@
 }
 
 div.project {
-	margin: 10px;
+	margin: 20px 10px;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
-	border: solid 3px grey;
+	/*border: solid 3px grey;*/
 	height: 200px;
 	box-shadow: 2px 2px 10px 0 grey;
 }
 
 .hover {
-	background-color: grey;
+	background-color: black;
 }

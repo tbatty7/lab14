@@ -1,6 +1,7 @@
-<div class="clear project" ng-mouseenter="hoverItem(true)" ng-mouseleave="hoverItem(false)">
+<div class="clear project" style="border: solid 3px {{border}};" ng-click="popup()" ng-model="projDiv">
 	<img class="projectImg" src="{{project.src}}"> 
-	<h1>{{project.name}}</h1>
+	<h1>{{project.name | date}}</h1>
 	<h2>{{project.date}}</h2>
-	<p>{{project.collaborators}}</p>
+	<p >Here are the collaborators:	</p>
+	<span ng-repeat="name in project.collaborators">{{name}} </span>
 </div>
